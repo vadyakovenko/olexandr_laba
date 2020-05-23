@@ -1,0 +1,4 @@
+.page-item:hover a {
+    background: #007bff;
+    color: #fff;
+}

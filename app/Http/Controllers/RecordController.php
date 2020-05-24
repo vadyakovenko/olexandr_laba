@@ -13,7 +13,6 @@ class RecordController extends Controller
     public function create(Document $document)
     {
         return view('record_create', compact('document'));
-
     }
 
     public function store(Request $request, Document $document)

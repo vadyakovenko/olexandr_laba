@@ -17,25 +17,14 @@ class DocumentController extends Controller
     public function store(Request $request)
     {
         /** @var Document $documen */
-       $documen =  Document::create($request->all());
+       $documen = Document::create($request->all());
        $documen->blocks()->attach($request->blocks);
        return redirect()->route('documents.show', $documen);
-
     }
 
     public function show(Document $document)
     {
         return view('document_show', compact('document'));
-    }
-
-    public function edit($id)
-    {
-        //
-    }
-
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     public function destroy(Document $document)

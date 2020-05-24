@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-
 Route::get('/', 'DashboardController@index')->name('dashboard');
 Route::get('blocks/{block}', 'BlockController@show')->name('blocks.show');
 

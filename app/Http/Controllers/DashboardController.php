@@ -13,8 +13,8 @@ class DashboardController extends Controller
     public function index()
     {
         $blocks = Block::all();
-        $documents = Document::query();
 
+        $documents = Document::query();
         foreach ($blocks as $block) {
             $documents->whereHas('blocks', function(Builder $builder) use($block) {
                 $builder->where('id', $block->id);
